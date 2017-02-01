@@ -1,5 +1,6 @@
 <html>
 <head>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script>
 var totalCount = 5;
@@ -73,10 +74,14 @@ document.body.style.backgroundSize = "cover";// Background repeat
 	height: 100%;
 }
 </style>
-	</div>
 
-	<div align=center style="position:relative; top: 50%; transform: translateY(-50%)">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UUsIg9WMfxjZZvwROleiVsQg&autoplay=1" frameborder="0" allowfullscreen></iframe>
-	</div>
+<div align=center style="position:relative; top: 50%; transform: translateY(-80%)">
+<iframe id="playlist" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UUsIg9WMfxjZZvwROleiVsQg&autoplay=1&index=0" frameborder="0" allowfullscreen></iframe>
+<script>
+var random = Math.floor(Math.random() * 100) // random number between 0 and 99
+var iframe = document.getElementById('playlist')
+iframe.setAttribute('src', iframe.getAttribute('src').replace(/index=\d+/, 'index='+random))
+</script>
+</div>
 
 	</body>
