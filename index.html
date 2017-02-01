@@ -76,6 +76,24 @@ document.body.style.backgroundSize = "cover";// Background repeat
 video();
 </script>
 
+<style>
+.button4 {
+	position: fixed;
+	top: 10%;
+	right: 50%;
+	margin: auto;
+	}
+</style>
+
+<style>
+.button3 {
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	margin: auto;
+}
+</style>
+
 <div id=button>
 <style>
 
@@ -168,7 +186,7 @@ right: 0;
 </style>
 </div>
 
-<div id=button align=center style="position:relative; top: 25%; padding: 1px" >
+<div class=button3>
 <button class="button" z-index="900"><span>New Image </span></button>
 <script>
 document.getElementsByClassName('button')[0].onclick = function(event){ ChangeIt();
@@ -176,7 +194,7 @@ document.getElementsByClassName('button')[0].onclick = function(event){ ChangeIt
 </script>
 </div>
 
-<div id=button1 align=center style="position:relative; top: 25%; padding: 1px" >
+<div class=button4>
 <button class="button1" z-index="900"><span>New Video </span></button>
 <script>
 document.getElementsByClassName('button1')[0].onclick = function(event){ video();
@@ -202,4 +220,3 @@ document.getElementsByClassName('button1')[0].onclick = function(event){ video()
 
 
 	</body>
-
