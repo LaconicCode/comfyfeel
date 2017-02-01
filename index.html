@@ -2,6 +2,16 @@
 <head>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script>
+function video()
+{
+var random = Math.floor(Math.random() * 100) // random number between 0 and 99
+var iframe = document.getElementById('playlist')
+iframe.setAttribute('src', iframe.getAttribute('src').replace(/index=\d+/, 'index='+random))
+}
+</script>
+
 <script>
 var totalCount = 5;
 function ChangeIt()
@@ -35,12 +45,6 @@ document.body.style.backgroundSize = "cover";// Background repeat
 <nav class="navbar navbar-inverse navbar-static-top example-8">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar8">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
         <a class="navbar-brand text-hide" href="#">Brand Text
         </a>
       </div>
@@ -52,7 +56,7 @@ document.body.style.backgroundSize = "cover";// Background repeat
 
         </ul>
 				<ul class="nav navbar-nav navbar-left">
-					<li class="active"><a href="https://bryznnasty.tech/">About</a></li>
+					<li class="active"><a href="https://bryznasty.tech/">About</a></li>
 
       </div>
       <!--/.nav-collapse -->
@@ -61,10 +65,129 @@ document.body.style.backgroundSize = "cover";// Background repeat
   </nav>
 </div>
 
+
+
+<div align=center style="position:relative; top: 50%; transform: translateY(-80%)">
+<iframe id="playlist" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UUsIg9WMfxjZZvwROleiVsQg&autoplay=1&index=0" frameborder="0" allowfullscreen></iframe>
+
+</div>
+
+<script>
+video();
+</script>
+
+<div id=button>
+<style>
+
+.button {
+display: inline-block;
+border-radius: 4px;
+background-color: #404040;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 15px;
+padding: 20px;
+width: 150px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+top: 50%
+}
+
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 25px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+}
+</style>
+</div>
+
+<div id=button1>
+<style>
+
+.button1 {
+display: inline-block;
+border-radius: 4px;
+background-color: #404040;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 15px;
+padding: 20px;
+width: 150px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+top: 50%
+}
+
+.button1 span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button1 span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button1:hover span {
+padding-right: 25px;
+}
+
+.button1:hover span:after {
+opacity: 1;
+right: 0;
+}
+</style>
+</div>
+
+<div id=button align=center style="position:relative; top: 30%; transform: translateY(30%) padding: 150px" >
+<button class="button" z-index="900"><span>New Image </span></button>
+<script>
+document.getElementsByClassName('button')[0].onclick = function(event){ ChangeIt();
+ }
+</script>
+</div>
+
+<div id=button1 align=center style="position:relative; top: 30%; transform: translateY(-50%) padding: 150px" >
+<button class="button1" z-index="900"><span>New Video </span></button>
+<script>
+document.getElementsByClassName('button1')[0].onclick = function(event){ video();
+ }
+</script>
+</div>
+
 <div class="banana">
 	<style>
 .banana {
-	z-index:    -150;
+	z-index:    -999;
 	top:        0;
 	left:       0;
 	position:   absolute;
@@ -74,14 +197,8 @@ document.body.style.backgroundSize = "cover";// Background repeat
 	height: 100%;
 }
 </style>
-
-<div align=center style="position:relative; top: 50%; transform: translateY(-80%)">
-<iframe id="playlist" width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UUsIg9WMfxjZZvwROleiVsQg&autoplay=1&index=0" frameborder="0" allowfullscreen></iframe>
-<script>
-var random = Math.floor(Math.random() * 100) // random number between 0 and 99
-var iframe = document.getElementById('playlist')
-iframe.setAttribute('src', iframe.getAttribute('src').replace(/index=\d+/, 'index='+random))
-</script>
 </div>
+
+
 
 	</body>
