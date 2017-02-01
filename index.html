@@ -3,26 +3,9 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="main.css">
-<script>
-function video()
-{
-var random = Math.floor(Math.random() * 100) // random number between 0 and 99
-var iframe = document.getElementById('playlist')
-iframe.setAttribute('src', iframe.getAttribute('src').replace(/index=\d+/, 'index='+random))
-}
-</script>
-
-<script>
-var totalCount = 11;
-function ChangeIt()
-{
-var num = Math.ceil( Math.random() * totalCount );
-document.body.background = 'images/'+num+'.jpg';
-document.body.style.backgroundSize = "cover";// Background repeat
-}
-</script>
 <title> Comfy Feel </title>
 <link rel="icon" href="https://i.imgur.com/Rtr2t6U.png">
+<script src="app.js"></script>
 </head>
 
 <body>
@@ -63,7 +46,6 @@ document.body.style.backgroundSize = "cover";// Background repeat
 
 <div id=button>
 </div>
-
 <div id=button1>
 </div>
 
@@ -85,9 +67,10 @@ document.getElementsByClassName('button1')[0].onclick = function(event){ video()
 
 <div class="banana">
 </div>
-	<script>
+
+<script>
 		video();
-	</script>
+</script>
 
 	</body>
 </html>
