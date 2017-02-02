@@ -5,7 +5,7 @@ var iframe = document.getElementById('playlist')
 iframe.setAttribute('src', iframe.getAttribute('src').replace(/index=\d+/, 'index='+random))
 }
 
-var totalCount = 11;
+var totalCount = 12;
 function ChangeIt()
 {
 var num = Math.ceil( Math.random() * totalCount );
