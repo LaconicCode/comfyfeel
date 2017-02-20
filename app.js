@@ -1,6 +1,6 @@
 function video()
 {
-var random = Math.floor(Math.random() * 152) // random number between 0 and *
+var random = Math.floor(Math.random() * 100) // random number between 0 and *
 var iframe = document.getElementById('playlist')
 iframe.setAttribute('src', iframe.getAttribute('src').replace(/index=\d+/, 'index='+random))
 }
